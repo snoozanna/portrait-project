@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan&display=swap");
+
+:root {
+  --main-bg-color: rgb(217 225 220);
+  --main-color: #000;
+  --accent-color: rgb(197, 17, 119);
+}
+
+body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Spartan";
+  font-size: 14px;
+  background-color: var(--main-bg-color);
+  color: var(--main-color);
+
+  /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 500% 500%;
+  animation: gradient 15s ease infinite; */
+}
+
+section.introduction {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: 2rem;
+}
+
+section.introduction > h1 {
+  font-size: 4rem;
+}
+
+.slide-container {
+  scroll-snap-type: y mandatory;
+  /* overflow-y: scroll; */
+  height: 100vh;
+}
+
+.slide {
+  height: 100vh;
+}
+
+.portrait-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+}
+
+.portrait-title {
+  margin-bottom: 30px;
+  font-size: 3rem;
+}
+
+.portrait-img {
+  width: 100vw;
+  margin-bottom: 30px;
+  border: 1px solid black;
+  box-shadow: 3px 2px 8px black;
+}
+
+.portrait-quote {
+  font-size: 2rem;
+}
+
+header {
+  /* display: flex;
+  justify-content: space-between; */
+  display: none;
+}
+
+header > nav {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  position: fixed;
+  bottom: 1vh;
+
+  width: 90%;
+  text-align: right;
+  display: flex;
+  justify-content: space-between;
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+/* ANIMATIONS */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

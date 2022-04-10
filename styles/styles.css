@@ -20,16 +20,24 @@ body {
   animation: gradient 15s ease infinite; */
 }
 
+.contents > li {
+  margin-block-end: 10px;
+}
+
 section.introduction {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  font-size: 2rem;
+  justify-content: center;
+  font-size: 1.5rem;
 }
 
 section.introduction > h1 {
   font-size: 4rem;
+}
+
+section.introduction > p {
+  margin-block-end: 20px;
 }
 
 .slide-container {
@@ -38,9 +46,9 @@ section.introduction > h1 {
   height: 100vh;
 }
 
-.slide {
+/* .slide {
   height: 100vh;
-}
+} */
 
 .portrait-container {
   display: flex;

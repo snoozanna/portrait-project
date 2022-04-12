@@ -10,7 +10,7 @@ body {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  font-family: "Spartan";
+  font-family: "Spartan", sans-serif;
   /* font-size: 14px; */
   background-color: var(--main-bg-color);
   color: var(--main-color);

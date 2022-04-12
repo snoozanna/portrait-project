@@ -1,7 +1,37 @@
+header {
+  display: block;
+  position: sticky;
+  top: 0;
+  background-color: var(--main-bg-color);
+  padding: 20px 0 0 0;
+}
+
+header > h1 {
+  font-size: 3rem;
+}
+section.about {
+  margin-top: 30px;
+}
 section.questions {
   margin-bottom: 100px;
 }
 
 section.questions > ul {
   list-style: inside;
+}
+
+section.questions > ul > li {
+  margin-bottom: 5px;
+}
+
+@media screen and (min-width: 600px) {
+  .section-container {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+  }
+  section.about {
+    max-width: 50%;
+    margin-inline-end: 50px;
+  }
 }

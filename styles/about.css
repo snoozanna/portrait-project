@@ -1,0 +1,7 @@
+section.questions {
+  margin-bottom: 100px;
+}
+
+section.questions > ul {
+  list-style: inside;
+}

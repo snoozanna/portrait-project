@@ -11,18 +11,53 @@ body {
   display: flex;
   flex-direction: column;
   font-family: "Spartan";
-  font-size: 14px;
+  /* font-size: 14px; */
   background-color: var(--main-bg-color);
   color: var(--main-color);
 
   /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 500% 500%;
   animation: gradient 15s ease infinite; */
+  min-width: 300px;
+  overflow-x: auto;
+}
+
+main {
+  flex-grow: 1;
+}
+
+p {
+  line-height: 2.5rem;
+  margin-bottom: 20px;
+}
+h1 {
+  margin-block-end: 20px;
 }
 
 .contents > li {
   margin-block-end: 10px;
 }
+
+@media screen and (min-width: 600px) {
+  body {
+    padding: 40px;
+  }
+}
+
+/* HEADER  */
+
+header {
+  /* display: flex;
+  justify-content: space-between; */
+  display: none;
+}
+
+header > nav {
+  display: flex;
+  flex-direction: column;
+}
+
+/* INTRO */
 
 section.introduction {
   height: 100vh;
@@ -32,13 +67,21 @@ section.introduction {
   font-size: 1.5rem;
 }
 
-section.introduction > h1 {
+section > h1 {
   font-size: 4rem;
 }
 
 section.introduction > p {
   margin-block-end: 20px;
 }
+
+@media screen and (min-width: 600px) {
+  section.introduction {
+    max-width: 80%;
+    margin: auto;
+  }
+}
+/* PORTAITS */
 
 .slide-container {
   scroll-snap-type: y mandatory;
@@ -53,9 +96,12 @@ section.introduction > p {
 .portrait-container {
   display: flex;
   flex-direction: column;
-  padding-top: 50px;
+  padding-top: 40px;
+  margin-bottom: 150px;
 }
-
+.portrait-container:last-child {
+  padding-bottom: 100px;
+}
 .portrait-title {
   margin-bottom: 30px;
   font-size: 3rem;
@@ -64,37 +110,62 @@ section.introduction > p {
 .portrait-img {
   width: 100vw;
   margin-bottom: 30px;
-  border: 1px solid black;
-  box-shadow: 3px 2px 8px black;
+  border: 0.5px solid black;
+  /* box-shadow: 3px 2px 8px black; */
 }
 
 .portrait-quote {
   font-size: 2rem;
 }
 
-header {
-  /* display: flex;
-  justify-content: space-between; */
-  display: none;
+@media screen and (min-width: 600px) {
+  .portrait-container {
+    display: grid;
+    grid-template-areas:
+      "a b b"
+      "c b b"
+      "d b b";
+    max-height: 90vh;
+  }
+  .portrait-img {
+    grid-area: b;
+    max-width: 50%;
+    margin: auto;
+  }
+  .portrait-quote {
+    grid-area: c;
+  }
+  .portrait-info {
+    grid-area: d;
+  }
 }
 
-header > nav {
-  display: flex;
-  flex-direction: column;
-}
-
+/* FOOTER  */
 footer {
   position: fixed;
-  bottom: 1vh;
-
-  width: 90%;
+  padding: 20px;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  /* margin: auto; */
   text-align: right;
   display: flex;
   justify-content: space-between;
+  background: #dcdcf2;
+  border-top: 0.5px solid black;
 }
 
+footer > p {
+  margin-bottom: 0;
+}
 a:hover {
   color: var(--accent-color);
+}
+
+@media screen and (min-width: 600px) {
+  footer {
+    padding: 20px 40px;
+  }
 }
 
 /* ANIMATIONS */
